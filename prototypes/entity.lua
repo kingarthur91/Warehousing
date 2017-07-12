@@ -10,7 +10,7 @@ function define_warehouse_connector(mainOffset)
 	{
 		connector_main =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-main.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-main.png",
 			priority = "low",
 			width = 28,
 			height = 27,
@@ -20,7 +20,7 @@ function define_warehouse_connector(mainOffset)
 		},
 		led_red =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-led-red.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-led-red.png",
 			priority = "low",
 			width = 20,
 			height = 16,
@@ -30,7 +30,7 @@ function define_warehouse_connector(mainOffset)
 		},
 		led_green =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-led-green.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-led-green.png",
 			priority = "low",
 			width = 20,
 			height = 16,
@@ -40,7 +40,7 @@ function define_warehouse_connector(mainOffset)
 		},
 		led_blue =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-led-blue.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-led-blue.png",
 			priority = "low",
 			width = 21,
 			height = 22,
@@ -50,7 +50,7 @@ function define_warehouse_connector(mainOffset)
 		},
 		logistic_animation = 
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-logistic-animation.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-logistic-animation.png",
 			priority = "low",
 			blend_mode = "additive",
 			line_length = 4,
@@ -78,7 +78,7 @@ function define_storehouse_connector(mainOffset)
 	{
 		connector_main =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-main.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-main.png",
 			priority = "low",
 			width = 28,
 			height = 27,
@@ -88,7 +88,7 @@ function define_storehouse_connector(mainOffset)
 		},
 		led_red =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-led-red.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-led-red.png",
 			priority = "low",
 			width = 20,
 			height = 16,
@@ -98,7 +98,7 @@ function define_storehouse_connector(mainOffset)
 		},
 		led_green =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-led-green.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-led-green.png",
 			priority = "low",
 			width = 20,
 			height = 16,
@@ -108,7 +108,7 @@ function define_storehouse_connector(mainOffset)
 		},
 		led_blue =
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-led-blue.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-led-blue.png",
 			priority = "low",
 			width = 21,
 			height = 22,
@@ -118,7 +118,7 @@ function define_storehouse_connector(mainOffset)
 		},
 		logistic_animation = 
 		{
-			filename = "__Warehousing__/graphics/entity/circuit-connector/circuit-connector-logistic-animation.png",
+			filename = "__Warehousing v15__/graphics/entity/circuit-connector/circuit-connector-logistic-animation.png",
 			priority = "low",
 			blend_mode = "additive",
 			line_length = 4,
@@ -149,7 +149,7 @@ function define_warehouse(name, logistics_name)
 	{
 		type = entity_type,
 		name = "warehouse-" .. name,
-		icon = "__Warehousing__/graphics/icons/warehouse-" .. name .. ".png",
+		icon = "__Warehousing v15__/graphics/icons/warehouse-" .. name .. ".png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 2, result = "warehouse-" .. name},
 		max_health = 350,
@@ -158,6 +158,7 @@ function define_warehouse(name, logistics_name)
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		
 		resistances =
 		{
 			{
@@ -167,11 +168,13 @@ function define_warehouse(name, logistics_name)
 		},
 		collision_box = {{-2.7, -2.7}, {2.7, 2.7}},
 		selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+		drawing_box={{-3.0, -3.0}, {3.0, 3.0}},
 		fast_replaceable_group = "container",
 		inventory_size = 800,
+		scale_info_icons = true,
 		picture =
 		{
-			filename = "__Warehousing__/graphics/entity/warehouse-" .. name .. "-shadow.png",
+			filename = "__Warehousing v15__/graphics/entity/warehouse-" .. name .. "-shadow.png",
 			priority = "high",
 			width = 260,
 			height = 240,
@@ -214,7 +217,7 @@ function define_storehouse(name, logistics_name)
 	{
 		type = entity_type,
 		name = "storehouse-" .. name,
-		icon = "__Warehousing__/graphics/icons/storehouse-" .. name .. ".png",
+		icon = "__Warehousing v15__/graphics/icons/storehouse-" .. name .. ".png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 2, result = "storehouse-" .. name},
 		max_health = 250,
@@ -223,6 +226,7 @@ function define_storehouse(name, logistics_name)
 		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
 		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		scale_entity_info_icon=true,
 		resistances =
 		{
 			{
@@ -234,9 +238,10 @@ function define_storehouse(name, logistics_name)
 		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 		fast_replaceable_group = "container",
 		inventory_size = 150,
+		scale_info_icons = true,
 		picture =
 		{
-			filename = "__Warehousing__/graphics/entity/storehouse-" .. name .. ".png",
+			filename = "__Warehousing v15__/graphics/entity/storehouse-" .. name .. ".png",
 			priority = "high",
 			width = 129,
 			height = 100,

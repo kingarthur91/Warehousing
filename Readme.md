@@ -2,8 +2,6 @@ Warehousing
 ===
 #### Current version 0.0.11
 
-Now compatible with Factorio 0.15!
-
 Word of warning, the warehouses have been changed to 6x6 as per a suggestion, this will make all current warehouses potentially overlap and not come out right ... you have been warned!
 
 Store _all_ the things! (So we heard you like boxes, you pack rat you!)
